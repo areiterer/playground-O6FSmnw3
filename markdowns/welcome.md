@@ -46,8 +46,14 @@ And now comes the fancy part: Instead of cluttering the component with divs, spa
 Starting with the _Header_ component, there will be a styled component for the rank, title and the link to the source homepage. It will get the rank, title and URL passed through props:
 
 @[The header component]({ 
-    "stubs": ["src/components/Story/Header.js"], 
-    "command": "./run.sh Header", 
+    "stubs": [
+        "src/components/Story/Header.js",
+        "src/components/Story/Footer.js",
+        "src/components/Story/Styles.js",
+        "src/components/Story/index.js",
+        "src/container/StoryList.js",
+    ], 
+    "command": "./run.sh", 
     "layout": "aside" })
 
 As you can see, styled-components creates React components by calling functions for the respective HTML element, passing plain CSS. The fancy syntax you can see here is a new ES6 functionality called [tagged template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
