@@ -48,13 +48,8 @@ Starting with the _Header_ component, there will be a styled component for the r
 @[The header component]({ 
     "stubs": [
         "src/components/Story/Header.js",
-        "src/components/Story/Footer.js",
-        "src/components/Story/Styles.js",
-        "src/components/Story/index.js",
-        "src/containers/StoryList.js",
-    ], 
-    "command": "./run.sh", 
-    "layout": "aside" })
+    ]
+})
 
 As you can see, styled-components creates React components by calling functions for the respective HTML element, passing plain CSS. The fancy syntax you can see here is a new ES6 functionality called [tagged template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
 Basically, I put the child components of the header inside a wrapper component which is used as a flex container to arrange all elements inside it horizontally. Then I created a styled component for each of the above mentioned items and arranged them within _HeaderWrapper_.
@@ -65,7 +60,11 @@ From my point of view, shifting attributes to the creation of styled components 
 
 Similar to this, I created the _Footer_ component:
 
-[Footer CODE HERE]
+@[The Story List]({ 
+    "stubs": [
+        "src/components/Story/Footer.js",
+    ]
+})
 
 As you can see, the time stamp is still just static text, since this will eventually become a separate component which calculates the time passed since the story was posted and brings it in a format like “8 minutes ago”, “17 hours ago” or “3 days ago”. Nevertheless, creating such a component is not in the scope of this blog post.
 
@@ -75,7 +74,11 @@ Again, there is a wrapper component which handles the font-size used in the foot
 
 Now that we finished both the header and the footer, we can put them where they belong and finalize the _Story_ component:
 
-[Story CODE HERE]
+@[The Story List]({ 
+    "stubs": [
+        "src/components/Story/index.js",
+    ]
+})
 
 # The _“StoryList”_ component
 
@@ -83,7 +86,11 @@ Now that we created a component which represents one item in the list, we still 
 
 The StoryList component will receive an array of stories to render a `<Story>` once per item in the list. In this case, the rank will be calculated by the index of the item within the array since this will not be part of the story item we get from the API later.
 
-[StoryList CODE HERE]
+@[The Story List]({ 
+    "stubs": [
+        "src/containers/StoryList.js",
+    ]
+})
 
 # The App
 
@@ -91,7 +98,17 @@ Now we just have to use the `<StoryList>` component somewhere in the app, and pa
 
 Since the App component is the root of the application, i also used it to define some global CSS rules. Styled-Components provides functionality to inject CSS globally, but they do only recommend to use it for styling the body or defining the font-face globally. (See [injectGlobal](https://www.styled-components.com/docs/api#injectglobal))
 
-[App CODE HERE]
+@[The hacker news list]({ 
+    "stubs": [
+        "src/components/Story/Header.js",
+        "src/components/Story/Footer.js",
+        "src/components/Story/Styles.js",
+        "src/components/Story/index.js",
+        "src/containers/StoryList.js",
+    ], 
+    "command": "./run.sh", 
+    "layout": "aside" 
+})
 
 As you can see, I retrieve my stories from my static API within componentWillMount and put them into the state. This will change as soon as the app will fetch new Stories from the API, which I will handle in a later blog post.
 
