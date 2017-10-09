@@ -51,7 +51,7 @@ Starting with the _Header_ component, there will be a styled component for the r
         "src/components/Story/Footer.js",
         "src/components/Story/Styles.js",
         "src/components/Story/index.js",
-        "src/container/StoryList.js",
+        "src/containers/StoryList.js",
     ], 
     "command": "./run.sh", 
     "layout": "aside" })
