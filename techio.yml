@@ -3,7 +3,13 @@ title : React Project
 # Table of content
 plan:
   - title: Welcome # Set the page title (only displayed if your contribution has several pages)
-    statement: markdowns/welcome.md # Set the file path to the page content
+    statement: markdowns/1_welcome.md # Set the file path to the page content
+  - title: The Story Component # Set the page title (only displayed if your contribution has several pages)
+    statement: markdowns/2_storycomponent.md # Set the file path to the page content
+  - title: The StoryList Component # Set the page title (only displayed if your contribution has several pages)
+    statement: markdowns/3_storylistcomponent.md # Set the file path to the page content
+  - title: The App # Set the page title (only displayed if your contribution has several pages)
+    statement: markdowns/4_app.md # Set the file path to the page content
 #  - title: Another Page
 #    statement: markdowns/another-page.md
 
