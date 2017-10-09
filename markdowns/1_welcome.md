@@ -9,6 +9,8 @@ In this post, I will focus on building the components for one HackerNews story a
 
 ![A screenshot of the HackerNews feed we will build](./images/screenshot.png "We will build a list of HackerNews stories")
 
+Over the course of this article, I'm going to show you some code snippets of the components that I created. At the end, there will be a runnable code snippet, so you can actually see what we built. And now, let's start with the setup.
+
 # Setting up the project
 
 I’m going to assume that you already have your environment set up and installed node and npm, as well as create-react-app.
