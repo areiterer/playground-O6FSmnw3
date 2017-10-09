@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Story from "./components/Story";
+import StoryList from "./containers/StoryList";
 
 const items = [
   {
